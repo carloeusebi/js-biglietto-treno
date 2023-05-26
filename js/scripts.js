@@ -13,3 +13,9 @@ const passengerAge = parseInt(prompt("What's the passenger's age?", '32'));
 
 console.log("Kilometers: " + kilometers);
 console.log("Passenger's Age: " + passengerAge);
+
+// TODO Validation
+
+// # Calculating price
+const price = kilometers * pricePerKm;
+console.log(price);
