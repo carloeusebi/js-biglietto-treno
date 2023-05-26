@@ -4,8 +4,8 @@ console.log('JSOK');
 const pricePerKm = 0.21;
 const ageMinor = 18;
 const ageSenior = 65;
-const discountMinor = 20;
-const discountSenior = 65;
+const discountMinor = 0.8;
+const discountSenior = 0.6;
 
 // # Collecting inputs
 const kilometers = parseInt(prompt('How many km are you traveling?', '300'));
@@ -17,5 +17,13 @@ console.log("Passenger's Age: " + passengerAge);
 // TODO Validation
 
 // # Calculating price
-const price = kilometers * pricePerKm;
+let price = kilometers * pricePerKm;
+console.log(price);
+
+if (passengerAge < ageMinor) {
+    price *= discountMinor;
+} else if (passengerAge > ageSenior){
+    price *= discountSenior;
+}
+
 console.log(price);

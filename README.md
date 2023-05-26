@@ -21,9 +21,8 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 1. Ask user for passenger's age;
 1. (Validate user's inputs);
 1. Calculate price for input km;
-1. **IF NOT** age between minor and senior age;
-    - **IF** age is over senior apply discount for seniors;
-    - **ELSE** apply discount for minors;
+1. **IF** age is under minor apply discount for minors;
+    - **ELSE IF** age is over senior apply discount for seniors;
 1. Round price;
 1. Print price;
  
