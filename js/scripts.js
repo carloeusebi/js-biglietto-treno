@@ -7,9 +7,15 @@ const ageSenior = 65;
 const discountMinor = 0.8;
 const discountSenior = 0.6;
 
+// # DOM Elements
+const elementTravelDistance = document.getElementById('travel-distance');
+const elementPassengerAge = document.getElementById('passenger-age');
+const elementTicketPrice = document.getElementById('ticket-price');
+const elementDiscounts = document.getElementById('discounts');
+
 // # Collecting inputs
-// const kilometers = parseInt(prompt('How many km are you traveling?', '300'));
-// const passengerAge = parseInt(prompt("What's the passenger's age?", '32'));
+const kilometers = parseInt(prompt('How many km are you traveling?', '300'));
+const passengerAge = parseInt(prompt("What's the passenger's age?", '32'));
 
 console.log("Kilometers: " + kilometers);
 console.log("Passenger's Age: " + passengerAge);
@@ -37,11 +43,23 @@ if (!isValid){
 
     let price = kilometers * pricePerKm;
     
+    let discountedPrice = 0;
+
     if (passengerAge < ageMinor) {
-        price *= discountMinor;
+        discountedPrice = price * discountMinor;
     } else if (passengerAge > ageSenior){
-        price *= discountSenior;
+        discountedPrice = price * discountSenior;
     }
-    price = price.toFixed(2);
-    console.log(`Price: ${price}€`);
+    console.log(`rice: ${price}€`);
+
+    // Printing data
+    elementTravelDistance.innerText = kilometers + 'km';
+    elementPassengerAge.innerText = passengerAge;
+    elementTicketPrice.innerText = price.toFixed(2) + '€';
+
+    if (discountedPrice){
+        elementDiscounts.innerHTML = `
+        <span>Discounted Price:</span>
+        <span class="fw-bold">${discountedPrice.toFixed(2)}€`;
+    }
 }
