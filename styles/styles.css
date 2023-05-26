@@ -1,11 +1,21 @@
-/* css reset */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background-color: #f2f3f7;
 }
 
-body{
-    font-family: sans-serif;
+header{
+    background-color: white;
+    height: 80px;
+    box-shadow: 0 0 10px 10px lightgray;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header img{
+    height: 50px;
+}
+
+.card{
+    box-shadow: 0 0 20px lightgray;
 }

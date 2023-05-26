@@ -8,8 +8,8 @@ const discountMinor = 0.8;
 const discountSenior = 0.6;
 
 // # Collecting inputs
-const kilometers = parseInt(prompt('How many km are you traveling?', '300'));
-const passengerAge = parseInt(prompt("What's the passenger's age?", '32'));
+// const kilometers = parseInt(prompt('How many km are you traveling?', '300'));
+// const passengerAge = parseInt(prompt("What's the passenger's age?", '32'));
 
 console.log("Kilometers: " + kilometers);
 console.log("Passenger's Age: " + passengerAge);
