@@ -18,12 +18,11 @@ console.log("Passenger's Age: " + passengerAge);
 
 // # Calculating price
 let price = kilometers * pricePerKm;
-console.log(price);
 
 if (passengerAge < ageMinor) {
     price *= discountMinor;
 } else if (passengerAge > ageSenior){
     price *= discountSenior;
 }
-
-console.log(price);
+price = price.toFixed(2);
+console.log(`Price: ${price}€`);
