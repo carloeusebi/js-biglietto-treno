@@ -31,8 +31,25 @@
 
     <main class="container-fluid d-flex justify-content-center align-items-center vh-100">
         <div class="card">
-            <div class="card-body">
-                <p class="card-text">Number of passengers: 1</p>
+            <div class="card-body text-end">
+                <div class="d-flex justify-content-between">
+                    <span>Travel Distance</span>
+                    <span id="travel-distance"></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Number of passengers:</span>
+                    <span>1</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Passenger #1 age:</span>
+                    <span id="passenger-age"></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Ticekt Price:</span>
+                    <span id="ticket-price"></span>
+                </div>
+                <div id="discounts" class="d-flex justify-content-between"></div>
+                <button type="button" class="btn btn-success mt-3">Buy Tickets</button>
             </div>
         </div>
     </main>
