@@ -20,7 +20,7 @@ let isValid = true;
 let error = '';
 
 //check if km is a number > 0
-if (!kilometers){
+if (!kilometers || kilometers <= 0){
     isValid = false;
     error = "ERROR: Km must be a number greater than 0.";
 }
@@ -54,6 +54,6 @@ if (!isValid){
     if (discountedPrice){
         elementDiscounts.innerHTML = `
         <span>Discounted Price:</span>
-        <span class="fw-bold">${discountedPrice.toFixed(2)}€`;
+        <span class="fw-bold">${discountedPrice.toFixed(2)}€</span>`;
     }
 }
